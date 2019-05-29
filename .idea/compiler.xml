@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="wy-admin" />
+        <module name="wy-gateway" />
+        <module name="wy-read-zuul" />
+        <module name="wy-server" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="wy-admin" target="1.8" />
+      <module name="wy-gateway" target="1.8" />
+      <module name="wy-read-zuul" target="1.8" />
+      <module name="wy-server" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="wy-admin" options="-parameters" />
+      <module name="wy-gateway" options="-parameters" />
+      <module name="wy-read-zuul" options="-parameters" />
+      <module name="wy-server" options="-parameters" />
+    </option>
+  </component>
+</project>

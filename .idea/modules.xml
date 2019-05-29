@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/spring-could-practice.iml" filepath="$PROJECT_DIR$/.idea/spring-could-practice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wy-admin/wy-admin.iml" filepath="$PROJECT_DIR$/wy-admin/wy-admin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wy-gateway/wy-gateway.iml" filepath="$PROJECT_DIR$/wy-gateway/wy-gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wy-read-zuul/wy-read-zuul.iml" filepath="$PROJECT_DIR$/wy-read-zuul/wy-read-zuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wy-server/wy-server.iml" filepath="$PROJECT_DIR$/wy-server/wy-server.iml" />
+    </modules>
+  </component>
+</project>

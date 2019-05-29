@@ -1,0 +1,304 @@
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-28T110520.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-28T110007.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T061910.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T061708.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T060530.500.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T054933.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T054728.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T054401.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T052615.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T052547.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T051653.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T051515.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T042953.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T042813.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T042201.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T115148.200.json
+
+###
+
+GET http://localhost:9092/{POST%20/user/register}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+<> 2019-05-27T112414.200.json
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/register
+Content-Type: application/json
+
+{
+  "data": "[{investor:'12345678912,12345678921',extension_id:1}]",
+  "orgUserId": 1
+}
+
+###
+
+POST http://localhost:9092/user/registerCONTENT-TYPEapplication/json{"user":1}
+
+###
+
+POST http://localhost:9092/user/registerCONTENT-TYPEapplication/json
+
+###
+
+GET http://localhost:9092/{POST%20/user/register}
+
+###
+
+GET http://localhost:9092/{POST%20/user/register}
+
+###
+

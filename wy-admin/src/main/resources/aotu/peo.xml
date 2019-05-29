@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+    <bean id="person1" class="practice.wyadmin.bean.People">
+        <property name="name" value="成兮" />
+        <property name="id" value="20" />
+    </bean>
+    <bean id="person2" class="practice.wyadmin.bean.People">
+        <property name="name" value="缘分五月" />
+        <property name="id" value="30" />
+    </bean>
+    <bean id="people" class="practice.wyadmin.bean.People">
+        <!-- 注入List集合 -->
+        <property name="peoples">
+            <list>
+                <ref bean="person1" />
+                <ref bean="person2" />
+            </list>
+        </property>
+    </bean>
+</beans>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="practice.wyadmin.mapper.SignMapper">
+    <!--当日签到-->
+    <resultMap id="BaseResultMap" type="practice.wyadmin.bean.TodaySign">
+        <result column="sign_time" property="sign_time"/>
+        <result column="alias" property="alias"/>
+        <result column="true_name" property="true_name"/>
+        <result column="add_sign_time" property="add_sign_time"/>
+        <result column="add_sign_times" property="add_sign_times"/>
+        <result column="add_active_time" property="add_active_time"/>
+        <result column="add_active_times" property="add_active_times"/>
+        <result column="epm_name" property="epm_name"/>
+    </resultMap>
+    <select id="getTodaySign" resultMap="BaseResultMap">
+
+        SELECT
+        FROM_UNIXTIME( sign_time/1000, '%Y-%m-%d %H:%m:%s') as sign_time,
+        inv.alias ,
+        inv.truename ,
+        ins.note as add_sign_time,
+        IFNULL(nc.note_count,0) AS add_sign_times,
+        ins.activity_day AS add_active_time,
+        IFNULL(acd.acd_count,0) AS add_active_times,
+        ier.epm_name
+        FROM
+        (select * from invest_sign order by sign_time desc) AS ins
+        LEFT JOIN investor inv ON inv.investor_id=ins.investor_id
+        LEFT JOIN investor_emp_relation AS ier ON ier.investor_id=ins.investor_id
+        LEFT JOIN (SELECT investor_id,COUNT(activity_day) AS acd_count FROM invest_sign WHERE activity_day<![CDATA[>]]>0 AND sign_time<![CDATA[ < ]]>#{endTime} GROUP BY investor_id) AS acd ON acd.investor_id=ins.investor_id
+        LEFT JOIN (SELECT investor_id,COUNT(note) AS note_count FROM invest_sign WHERE sign_time <![CDATA[ < ]]> #{endTime} GROUP BY investor_id) AS nc ON nc.investor_id=ins.investor_id
+        WHERE sign_time<![CDATA[<]]>#{endTime} and sign_time<![CDATA[>=]]>#{beginTime}
+        GROUP BY alias
+        ORDER BY sign_time DESC;
+    </select>
+    <!--连续签到奖励-->
+    <resultMap id="BaseResultMap1" type="practice.wyadmin.bean.AddSignGift">
+        <result column="alias" property="alias"/>
+        <result column="true_name" property="true_name"/>
+        <result column="prize_name" property="prize_name"/>
+        <result column="reward_name" property="reward_name"/>
+        <result column="investor_tel" property="investor_tel"/>
+        <result column="prize_type" property="prize_type"/>
+        <result column="prize_num" property="prize_num"/>
+        <result column="prize_time" property="prize_time"/>
+        <result column="get_time" property="get_time"/>
+        <result column="send_time" property="send_time"/>
+        <result column="get_state" property="get_state"/>
+        <result column="send_state" property="send_state"/>
+        <result column="epm_name" property="epm_name"/>
+    </resultMap>
+    <select id="getAddGift" resultMap="BaseResultMap1">
+
+SELECT
+	alias AS "会员号",
+	truename AS "真实姓名",
+	prize_name AS "奖品名称",
+	reward_name AS "奖励名称",
+	investor_tel AS "投资人电话",
+  CASE WHEN prize_type=0 THEN "无"
+  WHEN prize_type=1 THEN "熊猫币"
+  WHEN prize_type=2 THEN "优惠券"
+  WHEN prize_type=3 THEN "积分"
+  WHEN prize_type=4 THEN "现金红包"
+  WHEN prize_type=5 THEN "折扣券"
+  WHEN prize_type=6 THEN "实物"
+  END AS "奖品类型",
+  CASE WHEN prize_type=1 or prize_type=4  THEN prize_num/100
+  ELSE prize_num END AS "奖品数量",
+  date_format(FROM_UNIXTIME(prize_time/1000),'%Y-%m-%d %k:%i:%s') AS "中奖时间",
+  date_format(FROM_UNIXTIME(prize_time/1000),'%Y-%m-%d %k:%i:%s')AS "领奖时间",
+  date_format(FROM_UNIXTIME(prize_time/1000),'%Y-%m-%d %k:%i:%s') AS "发货时间",
+
+ CASE WHEN received_state=0 THEN "未领取"
+  WHEN received_state=1 THEN "已领取"
+  WHEN received_state=2 THEN "已过期"
+  END AS "领取状态" ,
+CASE WHEN send_state=-1 THEN "不需要发货"
+  WHEN send_state=0 THEN "待发货"
+  WHEN send_state=1 THEN "已发货"
+  END AS "发货状态",
+investor_emp_relation.epm_name AS "客服姓名"
+FROM activity_prize_send_record
+LEFT JOIN investor_emp_relation ON activity_prize_send_record.investor_id = investor_emp_relation.investor_id
+WHERE 1 = 1 AND prize_type != 0 AND activity_id = 9;
+    </select>
+</mapper>
