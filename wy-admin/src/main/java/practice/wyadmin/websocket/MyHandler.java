@@ -3,23 +3,26 @@ package practice.wyadmin.websocket;
 import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.scheduling.annotation.Scheduled;
+import org.springframework.stereotype.Service;
 import org.springframework.web.socket.*;
 
 import java.io.IOException;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
-import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * @author
  * @create 2019-05-30 17:54
  */
+
+@Service
 public class MyHandler implements WebSocketHandler {
     Logger logger = LoggerFactory.getLogger(MyHandler.class);
     //在线用户列表
-    private static final ConcurrentHashMap<String, WebSocketSession> users;
+    private static final Map<String, WebSocketSession> users;
     static {
-        users = new ConcurrentHashMap<String, WebSocketSession>();
+        users = new HashMap<String, WebSocketSession>();
     }
     @Override
     //新增socket链接
@@ -95,11 +98,11 @@ public class MyHandler implements WebSocketHandler {
 
     //异常处理
     public void handleTransportError(WebSocketSession webSocketSession, Throwable throwable) throws Exception {
+        users.remove(getClientId(webSocketSession));
             if (webSocketSession.isOpen()){
                 webSocketSession.close();
             }
         System.out.println("连接出错");
-        users.remove(getClientId(webSocketSession));
     }
     /**
      * 获取用户标识
@@ -123,11 +126,5 @@ public class MyHandler implements WebSocketHandler {
     @Override
     public boolean supportsPartialMessages() {
         return false;
-    }
-
-    @Scheduled(fixedRate = 5000)
-    public void sendMsg(){
-        boolean b = sendMessageToAllUsers(new TextMessage("系统群发"));
-        System.out.println("推送结果："+b);
     }
 }

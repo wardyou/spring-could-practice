@@ -2,21 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1890ac12-8c56-40ea-9ac2-9596d0849616" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_websocket_2_1_4_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_messaging_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_spring_websocket_5_1_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/bean/ChatResp.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/service/MsgService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/MyHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/WebSocketConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/WebSocketInterceptor.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/resources/static/index.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/ScheduledConfig.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/SendMsg.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wy-admin/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/wy-admin/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/WyAdminApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/WyAdminApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/api/UserApi.java" beforeDir="false" afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/api/UserApi.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/ChatServerHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/ChatServerHandler.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/NettyServerFilter.java" beforeDir="false" afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/NettyServerFilter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/MyHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/MyHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wy-admin/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/wy-admin/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/wy-server/target/" />
     <ignored path="$PROJECT_DIR$/wy-admin/target/" />
@@ -84,17 +75,18 @@
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CLASS" value="20" />
+          <entry key="CLASS" value="21" />
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="29" />
-          <entry key="Properties" value="1" />
+          <entry key="JAVA" value="33" />
+          <entry key="Properties" value="2" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="HTML" value="1" />
-          <entry key="JAVA" value="776" />
-          <entry key="PLAIN_TEXT" value="4" />
+          <entry key="JAVA" value="912" />
+          <entry key="PLAIN_TEXT" value="5" />
+          <entry key="Properties" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.vcs.git.usages">
@@ -109,19 +101,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/service/MsgService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
+            <state relative-caret-position="216">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/MyHandler.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="246">
-              <caret line="46" column="87" lean-forward="true" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
+            <state relative-caret-position="-297">
+              <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
                 <element signature="e#869#870#0" expanded="true" />
                 <element signature="e#897#898#0" expanded="true" />
               </folding>
@@ -129,23 +120,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://D:/javatool/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/SendMsg.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="956" column="30" lean-forward="true" selection-start-line="956" selection-start-column="30" selection-end-line="956" selection-end-column="30" />
-              <folding>
-                <element signature="e#36459#36460#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.1.6.RELEASE/spring-websocket-5.1.6.RELEASE.jar!/org/springframework/web/socket/TextMessage.class">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="108">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -153,8 +132,45 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/wy-admin/src/main/resources/static/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-189">
-              <caret line="23" column="19" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="19" />
+            <state relative-caret-position="291">
+              <caret line="67" column="43" lean-forward="true" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/WyAdminApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="270">
+              <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#423#424#0" expanded="true" />
+                <element signature="e#492#493#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/ScheduledConfig.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1161">
+              <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#908#909#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/wy-admin/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
             </state>
           </provider>
         </entry>
@@ -190,8 +206,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/wy-read-zuul/src/main/java/practice/wyreadzuul/util/IOUtils.java" />
-        <option value="$PROJECT_DIR$/wy-read-zuul/pom.xml" />
         <option value="$PROJECT_DIR$/wy-read-zuul/src/main/java/practice/wyreadzuul/util/HttpUtils.java" />
         <option value="$PROJECT_DIR$/wy-server/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/wy-server/pom.xml" />
@@ -223,7 +237,6 @@
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/HeartbeatHandler.java" />
         <option value="$PROJECT_DIR$/wy-admin/pom.xml" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/NettyClienty.java" />
-        <option value="$PROJECT_DIR$/wy-admin/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/ServerHandler.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/ClientHandler.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/ServerChannelInitializer.java" />
@@ -234,13 +247,16 @@
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/bean/ChatResp.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/NettyServerFilter.java" />
-        <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/WyAdminApplication.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/api/UserApi.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/WebSocketConfig.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/WebSocketInterceptor.java" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/resources/static/index.html" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/service/MsgService.java" />
+        <option value="$PROJECT_DIR$/wy-admin/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/MyHandler.java" />
+        <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/WyAdminApplication.java" />
+        <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/ScheduledConfig.java" />
+        <option value="$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/SendMsg.java" />
       </list>
     </option>
   </component>
@@ -258,8 +274,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="341" />
-    <option name="y" value="27" />
+    <option name="x" value="348" />
+    <option name="y" value="75" />
     <option name="width" value="1400" />
     <option name="height" value="1000" />
   </component>
@@ -320,7 +336,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wyadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
+              <item name="config" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-could-practice" type="b2602c69:ProjectViewProjectNode" />
@@ -330,7 +346,7 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="wyadmin" type="462c0819:PsiDirectoryNode" />
-              <item name="bean" type="462c0819:PsiDirectoryNode" />
+              <item name="websocket" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="spring-could-practice" type="b2602c69:ProjectViewProjectNode" />
@@ -365,7 +381,7 @@
     <property name="SearchEverywhereHistoryKey" value="channelFactory&#9;FILE&#9;jar://C:/Users/CLD/.m2/repository/io/netty/netty-transport/4.1.31.Final/netty-transport-4.1.31.Final.jar!/io/netty/channel/ChannelFactory.class&#10;initAndRegister()&#9;PSI&#9;JAVA://io.netty.bootstrap.AbstractBootstrap#initAndRegister" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559289631555" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1559295451786" />
     <property name="jdk.selected.JAVA_MODULE" value="1.8" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -574,7 +590,7 @@
       <workItem from="1558935709892" duration="261000" />
       <workItem from="1558935995646" duration="39441000" />
       <workItem from="1559185624605" duration="11422000" />
-      <workItem from="1559280593294" duration="8884000" />
+      <workItem from="1559280593294" duration="14257000" />
     </task>
     <task id="LOCAL-00001" summary="5-30">
       <created>1559204644952</created>
@@ -583,7 +599,14 @@
       <option name="project" value="LOCAL" />
       <updated>1559204644952</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="5-31">
+      <created>1559289660789</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1559289660789</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -619,7 +642,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="121907000" />
+    <option name="totallyTimeSpent" value="127280000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -645,14 +668,14 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32899022" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" weight="0.21800433" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.47991315" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" sideWeight="0.49946696" visible="true" weight="0.47448426" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.329718" />
       <window_info anchor="bottom" id="Spring" order="7" weight="0.329718" />
       <window_info anchor="bottom" id="Terminal" order="8" weight="0.13665944" />
       <window_info anchor="bottom" id="Docker" order="9" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.2494577" />
+      <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50053304" side_tool="true" weight="0.19978285" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" weight="0.329718" />
       <window_info anchor="bottom" id="Database Changes" order="12" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="13" show_stripe_button="false" />
@@ -678,7 +701,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="5-30" />
-    <option name="LAST_COMMIT_MESSAGE" value="5-30" />
+    <MESSAGE value="5-31" />
+    <option name="LAST_COMMIT_MESSAGE" value="5-31" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -693,27 +717,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.31.Final/netty-transport-4.1.31.Final.jar!/io/netty/bootstrap/ChannelFactory.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="11" column="31" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/io/netty/netty-transport/4.1.31.Final/netty-transport-4.1.31.Final.jar!/io/netty/bootstrap/AbstractBootstrap.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="33" column="25" selection-start-line="33" selection-start-column="25" selection-end-line="33" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/javatool/Java/jdk1.8.0_191/src.zip!/javax/annotation/PostConstruct.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="78" column="15" lean-forward="true" selection-start-line="78" selection-start-column="15" selection-end-line="78" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/wy-admin/src/main/resources/mybatis/mapper/SignMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="505">
@@ -856,13 +859,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="918">
-          <caret line="34" column="55" selection-start-line="34" selection-start-column="55" selection-end-line="34" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-messaging/5.1.6.RELEASE/spring-messaging-5.1.6.RELEASE.jar!/org/springframework/messaging/handler/annotation/MessageMapping.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="243">
@@ -881,13 +877,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
           <caret line="32" column="5" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/WyAdminApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
@@ -925,16 +914,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1242">
           <caret line="46" column="45" selection-start-line="46" selection-start-column="45" selection-end-line="46" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/PeopleConfig.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -983,30 +962,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/service/MsgService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="33" lean-forward="true" selection-start-column="33" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/javatool/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="956" column="30" lean-forward="true" selection-start-line="956" selection-start-column="30" selection-end-line="956" selection-end-column="30" />
-          <folding>
-            <element signature="e#36459#36460#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.1.6.RELEASE/spring-websocket-5.1.6.RELEASE.jar!/org/springframework/web/socket/TextMessage.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/com/netflix/eureka/eureka-client/1.9.8/eureka-client-1.9.8.jar!/com/netflix/discovery/TimedSupervisorTask.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
@@ -1018,13 +973,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="211">
           <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/resources/static/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-189">
-          <caret line="23" column="19" selection-start-line="23" selection-start-column="16" selection-end-line="23" selection-end-column="19" />
         </state>
       </provider>
     </entry>
@@ -1049,15 +997,100 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/MyHandler.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-websocket/5.1.6.RELEASE/spring-websocket-5.1.6.RELEASE.jar!/org/springframework/web/socket/TextMessage.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="246">
-          <caret line="46" column="87" lean-forward="true" selection-start-line="46" selection-start-column="87" selection-end-line="46" selection-end-column="87" />
+        <state relative-caret-position="270">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/boot/spring-boot-autoconfigure/2.1.4.RELEASE/spring-boot-autoconfigure-2.1.4.RELEASE.jar!/org/springframework/boot/autoconfigure/jdbc/DataSourceInitializerInvoker.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="162">
+          <caret line="15" column="6" selection-start-line="15" selection-start-column="6" selection-end-line="15" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/config/PeopleConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="19" column="62" lean-forward="true" selection-start-line="19" selection-start-column="62" selection-end-line="19" selection-end-column="62" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://D:/javatool/Java/jdk1.8.0_191/src.zip!/java/lang/String.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="956" column="30" lean-forward="true" selection-start-line="956" selection-start-column="30" selection-end-line="956" selection-end-column="30" />
+          <folding>
+            <element signature="e#36459#36460#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/service/MsgService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/resources/static/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="67" column="43" lean-forward="true" selection-start-line="67" selection-start-column="43" selection-end-line="67" selection-end-column="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/MyHandler.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-297">
+          <caret line="10" column="21" lean-forward="true" selection-start-line="10" selection-start-column="21" selection-end-line="10" selection-end-column="21" />
+          <folding>
             <element signature="e#869#870#0" expanded="true" />
             <element signature="e#897#898#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="18" column="61" lean-forward="true" selection-start-line="18" selection-start-column="61" selection-end-line="18" selection-end-column="61" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/ScheduledConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1161">
+          <caret line="43" column="54" lean-forward="true" selection-start-line="43" selection-start-column="54" selection-end-line="43" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#908#909#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/WyAdminApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="10" column="38" lean-forward="true" selection-start-line="10" selection-start-column="38" selection-end-line="10" selection-end-column="38" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#423#424#0" expanded="true" />
+            <element signature="e#492#493#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/wy-admin/src/main/java/practice/wyadmin/websocket/SendMsg.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="108">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
