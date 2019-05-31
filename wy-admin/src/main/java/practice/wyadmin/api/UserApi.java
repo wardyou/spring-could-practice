@@ -4,15 +4,21 @@ import com.alibaba.fastjson.JSONObject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.messaging.handler.annotation.MessageMapping;
+import org.springframework.messaging.handler.annotation.SendTo;
+import org.springframework.messaging.simp.SimpMessagingTemplate;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import practice.wyadmin.bean.ChatResp;
 import practice.wyadmin.config.PeopleConfig;
 import practice.wyadmin.mapper.SignMapper;
 import practice.wyadmin.util.HttpUtils;
+
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.security.Principal;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -29,12 +35,13 @@ public class UserApi {
     SignMapper signMapper;
     @Autowired
     PeopleConfig peopleConfig;
-    @RequestMapping(value = "/user/register",method = RequestMethod.POST)
+
+    @RequestMapping(value = "/user/register", method = RequestMethod.POST)
     @ResponseBody
-    public Map<String,Object> registerUser(HttpServletRequest request){
+    public Map<String, Object> registerUser(HttpServletRequest request) {
         Map map = new HashMap();
         JSONObject jsonObject = HttpUtils.getJSONObject(request);
-        if (jsonObject == null){
+        if (jsonObject == null) {
             map.put("msg", "jsonObject=null");
             map.put("errCode", 60000);
             return map;
@@ -45,16 +52,17 @@ public class UserApi {
 //        map1.put("AddSignGift_连续签到奖励", signMapper.getAddGift());
         try {
 //            ExcelUtil.getSignExcel(map1  ,"2017-05-29" ,false,false );
-        }catch (Exception e){
-        logger.error("生成excel异常",e);
+        } catch (Exception e) {
+            logger.error("生成excel异常", e);
         }
         map.put("people", peopleConfig.allPeople());
         return map;
     }
-    public Map<String,Object> loginUser(HttpServletRequest request){
+
+    public Map<String, Object> loginUser(HttpServletRequest request) {
         Map map = new HashMap();
         JSONObject jsonObject = HttpUtils.getJSONObject(request);
-        if (jsonObject == null){
+        if (jsonObject == null) {
             map.put("msg", "jsonObject=null");
             map.put("errCode", 60000);
             return map;

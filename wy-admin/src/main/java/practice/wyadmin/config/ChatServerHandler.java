@@ -5,6 +5,7 @@ import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.channel.group.ChannelGroup;
 import io.netty.channel.group.DefaultChannelGroup;
+import io.netty.handler.codec.http.FullHttpRequest;
 import io.netty.util.concurrent.GlobalEventExecutor;
 
 /**
@@ -13,7 +14,7 @@ import io.netty.util.concurrent.GlobalEventExecutor;
  * @author
  * @create 2019-05-29 15:52
  */
-public class ChatServerHandler extends SimpleChannelInboundHandler<Object> {
+public class ChatServerHandler extends SimpleChannelInboundHandler<FullHttpRequest> {
     public static ChannelGroup channels = new DefaultChannelGroup(GlobalEventExecutor.INSTANCE);
     /**
      * 当有客户端连接时，handlerAdded会执行,就把该客户端的通道记录下来，加入队列
@@ -56,14 +57,14 @@ public class ChatServerHandler extends SimpleChannelInboundHandler<Object> {
      * @throws Exception
      */
     @Override
-    protected void channelRead0(ChannelHandlerContext channelHandlerContext, Object s) throws Exception{
+    protected void channelRead0(ChannelHandlerContext channelHandlerContext, FullHttpRequest msg) throws Exception{
         Channel inComing = channelHandlerContext.channel();
 
         for (Channel channel : channels){
             if (channel != inComing){
-                channel.writeAndFlush("[用户" + inComing.remoteAddress() + " 说：]" + s + "\n");
+                channel.writeAndFlush("[用户" + inComing.remoteAddress() + " 说：]" + msg + "\n");
             }else {
-                channel.writeAndFlush("[我说：]" + s + "\n");
+                channel.writeAndFlush("[我说：]" + msg + "\n");
             }
         }
     }
