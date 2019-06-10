@@ -1,6 +1,9 @@
 package practice.wyadmin.api;
 
 import com.alibaba.fastjson.JSONObject;
+import org.apache.shiro.SecurityUtils;
+import org.apache.shiro.authc.UsernamePasswordToken;
+import org.apache.shiro.subject.Subject;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,6 +65,15 @@ public class UserApi {
     public Map<String, Object> loginUser(HttpServletRequest request) {
         Map map = new HashMap();
         JSONObject jsonObject = HttpUtils.getJSONObject(request);
+        String username = jsonObject.getString("username");
+        String password = jsonObject.getString("password");
+        boolean remember = jsonObject.getBoolean("rememberMe");
+        //得到设置token
+        UsernamePasswordToken token = new UsernamePasswordToken( username, password );
+        token.setRememberMe(remember);
+        //得到
+        Subject currentUser = SecurityUtils.getSubject();
+        currentUser.login(token);
         if (jsonObject == null) {
             map.put("msg", "jsonObject=null");
             map.put("errCode", 60000);
